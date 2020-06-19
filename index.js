@@ -30,6 +30,7 @@ for (let i = 0;i  < btnCount.length;i++){
                 let tom4 = new Audio('sounds/tom-4.mp3');
                 tom4.play();
                 break;
+                
             case 'l':
                 let tom2 = new Audio('sounds/tom-2.mp3');
                 tom2.play();
