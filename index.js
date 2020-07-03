@@ -5,7 +5,7 @@ for (let i = 0;i  < btnCount.length;i++){
         
         let btnHtml = this.innerHTML;
         soundDrum(btnHtml);
-
+        btnAnimation(btnHtml);
 
     });
 }
@@ -13,7 +13,7 @@ for (let i = 0;i  < btnCount.length;i++){
 document.addEventListener('keydown', function(event){
 
     soundDrum(event.key);
-
+    btnAnimation(event.key);
 });
 
 function soundDrum(key) {
@@ -50,4 +50,15 @@ function soundDrum(key) {
             break;           
         default:  alert('there is a problem');
     }
+}
+
+
+function btnAnimation(key) {
+    let activeBtn = document.querySelector('.' + key);
+
+    activeBtn.classList.add('pressed');
+
+    setTimeout(function(){
+        activeBtn.classList.remove('pressed');
+    }, 300);
 }
